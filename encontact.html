@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>İletişim | Yağız AKYÜZ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="picture/favicon.png" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="maincss.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body style="background-color: #00381e;">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1f0101;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="enmain.html" style="color: #38a6db;">YAĞIZ AKYÜZ</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" id="hizmet" style="color: #ffffff;" aria-current="page" href="enservice.html">projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="refre" style="color: #ffffff;" href="enreferences.html">references</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="ilet" aria-current="page" style="color: #ffffff;" href="encontact.html">contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="tr" aria-current="page" style="color: #db3d38;" href="index.html">Türkçe</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <br>
+        <h2 align="center" class="b">CONTACT</h2>
+        <br>
+        <table align="center">
+                <tr align="center">
+                <td width="200px" height="70px"><p class="p" style="font-size: larger;"><a href="mailto:akyzyagiz@gmail.com">akyzyagiz@gmail.com</a></p></td>
+                <td></td>
+                <td width="50px" height="30px"><a href="https://www.instagram.com/yagizakyz/?hl=tr"><img src="picture/insta.png" widht="60px" height="40px" alt="yazılım"></a></td>
+                <td></td>
+                <td width="50px" height="30px"><a href="https://twitter.com/yagizakyz"><img src="picture/twitter.png" widht="50px" height="30px" alt="yazılım"></a></td>
+                <td width="50px" height="30px"><a href="https://www.linkedin.com/in/ya%C4%9F%C4%B1z-aky%C3%BCz-158a34179/"><img src="picture/linkedln.png" widht="50px" height="30px" alt="yazılım"></a></td>
+                <td width="50px" height="30px"><a href="https://github.com/YagizAkyuz61"><img src="picture/github.png" widht="50px" height="30px" alt="yazılım"></a></td>
+            </tr>
+        </table>
+        <br>
+
+        <div align="center">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2Iv2E2PsEFm90XpM28cqTRG0jsaQqxVorh9l-zcVkSZ5xpQ/viewform?embedded=true" width="640" height="709" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
+        </div>
+
+        <script>
+          $(function(){
+              $("#hizmet").mouseenter(function(){
+                  $("#hizmet").css("color","#82029c");
+              });
+              $("#hizmet").mouseleave(function(){
+                  $("#hizmet").css("color","white");
+              });
+
+              $("#refre").mouseenter(function(){
+                  $("#refre").css("color","#baff2f");
+              });
+              $("#refre").mouseleave(function(){
+                  $("#refre").css("color","white");
+              });
+
+              $("#ilet").mouseenter(function(){
+                  $("#ilet").css("color","#006b39");
+              });
+              $("#ilet").mouseleave(function(){
+                  $("#ilet").css("color","white");
+              });
+          });
+        </script>
+    </body>
+</html>
