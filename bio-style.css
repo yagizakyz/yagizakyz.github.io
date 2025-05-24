@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  color: black;
+  overflow-x: hidden;
+}
+
+/* Logo */
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: black;
+  text-decoration: none;
+  z-index: 200;
+}
+
+/* Hamburger */
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 101;
+}
+
+.hamburger div {
+  height: 4px;
+  width: 100%;
+  background: black; /* white -> black (arka plan beyaz olduğu için) */
+  border-radius: 2px;
+}
+
+/* Yan taraftan kayan menü */
+.top-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+  transition: right 0.4s ease;
+  z-index: 110;
+  padding: 60px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* About Bölümü */
+.about-section {
+  text-align: left;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.about-list li {
+  margin: 10px 0;
+}
+
+.about-list li a {
+  font-weight: 700;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.about-list li a:hover {
+  color: black;
+}
+
+.about-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.about-underline {
+  width: 220px;
+  height: 1px;
+  background-color: black;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* PROJECT bölümü */
+.project-section {
+  text-align: left;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.project-list li {
+  margin: 10px 0;
+}
+
+.project-list li a {
+  font-weight: 700;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.project-list li a:hover {
+  color: black;
+}
+
+.project-underline {
+  width: 120px;
+  height: 3px;
+  background-color: black;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.social-icons {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+.social-icons a img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons a:hover img {
+  filter: grayscale(0%);
+}
+
+/* Menü açıldığında sağa kaydır */
+.top-menu.open {
+  right: 0;
+}
+
+/* Menü liste */
+.top-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.top-menu ul li {
+  margin: 20px 0;
+}
+
+.top-menu ul li a {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.top-menu ul li a:hover {
+  color: black;
+}
+
+/* Kapatma butonu (X) */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Bio içeriği */
+.bio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 40px 40px 40px;
+  height: 100vh;
+}
+
+.bio-text {
+  width: 60%;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.bio-image img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .bio-container {
+    flex-direction: column-reverse;
+    padding: 100px 20px 40px 20px;
+    text-align: center;
+    height: auto;       /* Burayı ekleyin */
+    min-height: 100vh;
+  }
+
+  .bio-text {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bio-image img {
+    width: 80%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 100px 20px 40px 20px;
+    text-align: center;
+  }
+
+  .contact-text {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .about-list li a,
+  .project-list li a {
+    font-size: 22px;
+  }
+
+  .hamburger {
+    width: 32px;
+    height: 24px;
+  }
+
+  .hamburger div {
+    height: 3px;
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 40px 40px 40px;
+  height: 100vh;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* solda hizala */
+  gap: 10px; /* başlık ve mail arası boşluk */
+}
+
+.contact-title {
+  font-weight: 600;
+  font-size: 32px; /* biraz küçültüldü */
+  text-transform: uppercase;
+  margin: 0;
+  color: black;
+}
+
+.contact-text {
+  font-size: 18px; /* biraz küçültüldü */
+  margin: 0;
+  color: black;
+}
+
+.contact-text a {
+  color: black;
+  text-decoration: none;
+  user-select: text;
+  transition: color 0.3s ease;
+}
+
+.contact-text a:hover {
+  color: black;
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 80px 20px;
+    height: auto;
+  }
+  .contact-info {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contact-image img {
+    max-height: 300px;
+  }
+}
